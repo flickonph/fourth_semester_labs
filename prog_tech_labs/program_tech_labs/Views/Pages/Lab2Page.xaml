@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="program_tech_labs.Views.Pages.Lab2Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    Title="Page"
+    d:DesignHeight="500"
+    d:DesignWidth="500"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+
+    <Grid 
+        Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock 
+                FontSize="24"
+                Margin="0, 0,0,5">
+                Gases
+            </TextBlock>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <ListBox 
+                    Grid.Column="0"
+                    Height="575"
+                    Name="AllGases">
+                </ListBox>
+                
+                <StackPanel Grid.Column="1">
+                    <TextBlock 
+                        FontSize="18"
+                        Margin="0, 0,0,5">
+                        Results
+                    </TextBlock>
+                    <ui:Card>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16" Name="Res">0</TextBlock>
+                            <TextBlock VerticalAlignment="Bottom" Margin="5,0" FontWeight="Bold" FontSize="16" Text="(cm^3/mol)"/>
+                        </StackPanel>
+                    </ui:Card>
+                </StackPanel>
+                
+            </Grid>
+        </StackPanel>
+        <ui:CardAction 
+            Grid.Row="1"
+            Name="Calculate"
+            Click="ButtonCalculate_OnClick"
+            HorizontalContentAlignment="Stretch"
+            Icon="ArrowForward20">
+            <TextBlock FontSize="16">Calculate!</TextBlock>
+        </ui:CardAction>
+    </Grid>
+</Page>

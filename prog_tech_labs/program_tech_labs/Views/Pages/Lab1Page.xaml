@@ -1,0 +1,125 @@
+﻿<Page
+    x:Class="program_tech_labs.Views.Pages.Lab1Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:mask="http://schemas.xceed.com/wpf/xaml/toolkit"
+    xmlns:s="clr-namespace:System;assembly=System.Runtime"
+    Title="lab_1"
+    d:DesignHeight="1000"
+    d:DesignWidth="500"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    mc:Ignorable="d">
+
+    <Grid Margin="20" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock 
+                FontSize="24"
+                Margin="0, 0,0,5">
+                "MaskedTextBox" phone number mask sample
+            </TextBlock>
+            <mask:MaskedTextBox
+                x:Name="LabMaskedTextBox"
+                Background="Transparent"
+                BorderThickness="0"
+                Foreground="White"
+                Mask="+7 (000) 000-00-00" 
+                CaretIndex="0"
+                ValueDataType="{x:Type s:String}"
+                FontSize="20"
+                Margin="0,5">
+            </mask:MaskedTextBox>
+            <Separator Margin="10, 5"></Separator>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <TextBlock
+                FontSize="24"
+                Margin="0, 5">
+                "PrintDocument" dialog call sample
+            </TextBlock>
+            <ui:Button
+                Click="ButtonBase_OnClick">
+                Call dialog
+            </ui:Button>
+            <Separator Margin="10, 5"></Separator>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+            <TextBlock
+                FontSize="24"
+                Margin="0, 5">
+                "TableLayout" WPF sample
+            </TextBlock>
+            <Grid
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Red">Grid.Row="0" Grid.Column="0"</TextBlock>
+                <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Orange">Grid.Row="0" Grid.Column="1"</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Blue">Grid.Row="1" Grid.Column="0"</TextBlock>
+                <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Background="Green">Grid.Row="1" Grid.Column="1"</TextBlock>
+            </Grid>
+            <Separator Margin="10, 5"></Separator>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="3">
+            <TextBlock
+                FontSize="24"
+                Margin="0, 5">
+                "ToolTip" and 2 more events usage sample
+            </TextBlock>
+            <ui:Button
+                Name="TestButton"
+                ToolTip="Tooltip"
+                MouseEnter="TestButton_OnMouseEnter"
+                Click="TestButton_OnClick">
+                Test button
+            </ui:Button>
+            <Separator Margin="10, 5"></Separator>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="4">
+            <TextBlock
+                FontSize="24"
+                Margin="0, 5">
+                Base types operations sample
+            </TextBlock>
+            <TextBlock Name="BaseTypeTextBlock">
+            </TextBlock>
+            <Separator Margin="10, 5"></Separator>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="5">
+            <TextBlock
+                FontSize="24"
+                Margin="0, 5">
+                Assets ".txt" file usage sample
+            </TextBlock>
+            <TextBlock
+                Name="Lorem"
+                TextWrapping="Wrap">
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
