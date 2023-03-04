@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab_1_form</title>
+</head>
+
+<body>
+  <form action="" class="form">
+    <div class="form__title">
+      <h1 class="form__title-text">Создание почтового ящика</h1>
+    </div>
+    <div class="form__content">
+
+      <div class="form__content__base-row">
+        <div class="form__content__name-column">
+          <label for="name" class="form__content__base-label-text">Имя</label>
+          <input class="form__content__name-input" type="text" id="name" placeholder="Иван"/>
+        </div>
+        <div class="form__content__surname-column">
+          <label for="surname" class="form__content__base-label-text">Фамилия</label>
+          <input class="form__content__surname-input" type="text" id="surname" placeholder="Иванов"/>
+        </div>
+      </div>
+
+      <label class="form__content__base-label-text">Пол</label>
+      <div class="form__content__radio__sex-row">
+        <div class="form__content__radio__sex-item-male">
+          <input type="radio" id="sex-radio-1" name="sex-radio">
+          <label class="form__content__radio__sex-label-text" for="sex-radio-1">Мужской</label>
+        </div>
+        <div class="form__content__radio__sex-item-female">
+          <input type="radio" id="sex-radio-2" name="sex-radio">
+          <label class="form__content__radio__sex-label-text" for="sex-radio-2">Женский</label>
+        </div>
+        <div class="form__content__radio__sex-item-helicopter">
+          <input id="sex-radio-3" name="sex-radio" type="radio">
+          <label class="form__content__radio__sex-label-text" for="sex-radio-3">Attack helicopter</label>
+        </div>
+      </div>
+
+      <label class="form__content__base-label-text">Дата рождения</label>
+      <div class="form__content__base-row">
+        <select class="form__content__select-day" name="День">
+          <option disabled selected>День</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+        <select class="form__content__select-month" name="Месяц">
+          <option disabled selected>Месяц</option>
+          <option value="1">Январь</option>
+          <option value="2">Февраль</option>
+          <option value="3">Март</option>
+          <option value="4">Апрель</option>
+          <option value="5">Май</option>
+          <option value="6">Июнь</option>
+          <option value="7">Июль</option>
+          <option value="8">Август</option>
+          <option value="9">Сентябрь</option>
+          <option value="10">Октябрь</option>
+          <option value="11">Ноябрь</option>
+          <option value="12">Декабрь</option>
+        </select>
+        <select class="form__content__select-year" name="Год">
+          <option disabled selected>Год</option>
+          <option value="1970">1970</option>
+          <option value="2007">2007</option>
+          <option value="2023">2023</option>
+          <option value="2077">2077</option>
+        </select>
+      </div>
+
+      <div class="form__content__password-column">
+        <a class="form__content__password-label-text" href="https://spinningrat.online/">Нажми на меня!</a>
+        <input class="form__content__password-input" type="password" placeholder="Пароль"/>
+      </div>
+    </div>
+    <div class="form__footer">
+      <button class="form__footer__submit-button" type="submit">
+        Создать
+      </button>
+    </div>
+  </form>
+</body>
+</html>
+
+<style>
+  /* form */
+
+  .form {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 10px;
+    border-radius: 35px;
+    background-color:#CAD2C5;
+  }
+
+  /* title */
+
+  .form__title {
+
+    background-color: #e8f1de;
+    text-align: center;
+    border-radius: 30px 30px 5px 5px;
+    height: 50px;
+  }
+
+  .form__title-text {
+    color:#2F3E46;
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  /* content */
+
+  .form__content {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 10px;
+    background-color: #e8f1de;
+    border-radius: 5px;
+  }
+
+  .form__content__base-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form__content__base-label-text {
+    margin-top: 5px;
+    align-self: start;
+    color: #7f887f;
+  }
+
+  .form__content__name-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form__content__surname-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  .form__content__name-input {
+    border-color: transparent;
+    background-color: #CAD2C5;
+    color: #2c3e50;
+    border-radius: 10px 3px 3px 10px;
+    height: 40px;
+  }
+
+  .form__content__surname-input {
+    border-color: transparent;
+    background-color: #CAD2C5;
+    color: #2c3e50;
+    border-radius: 3px 10px 10px 3px;
+    height: 40px;
+  }
+
+  .form__content__radio__sex-row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .form__content__radio__sex-item-male{
+    background-color: #CAD2C5;
+    width: 60%;
+    padding: 8px;
+    margin-right: 1px;
+    text-align: center;
+    border-radius: 10px 3px 3px 10px;
+  }
+
+  .form__content__radio__sex-item-female{
+    background-color: #CAD2C5;
+    width: 60%;
+    padding: 8px;
+    text-align: center;
+    border-radius: 3px 3px 3px 3px;
+  }
+
+  .form__content__radio__sex-item-helicopter{
+    background-color: #CAD2C5;
+    width: 100%;
+    padding: 8px;
+    margin-left: 1px;
+    text-align: center;
+    border-radius: 3px 10px 10px 3px;
+  }
+
+  .form__content__radio__sex-label-text {
+    align-self: start;
+    color: #2F3E46;
+  }
+
+  .form__content__select-day {
+    border-color: transparent;
+    background-color: #CAD2C5;
+    color: #2c3e50;
+    border-radius: 10px 3px 3px 10px;
+    margin-right: 1px;
+    height: 40px;
+    width: 50%;
+  }
+
+  .form__content__select-month {
+    border-color: transparent;
+    background-color: #CAD2C5;
+    color: #2c3e50;
+    border-radius: 3px;
+    height: 40px;
+    width: 100%;
+  }
+
+  .form__content__select-year {
+    border-color: transparent;
+    background-color: #CAD2C5;
+    color: #2c3e50;
+    margin-left: 1px;
+    border-radius: 3px 10px 10px 3px;
+    height: 40px;
+    width: 50%;
+  }
+
+  .form__content__password-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__content__password-label-text {
+    margin-top: 5px;
+    align-self: start;
+    color: #52796F;
+  }
+
+  .form__content__password-input {
+    border-color: transparent;
+    background-color: #CAD2C5;
+    color: #2c3e50;
+    border-radius: 10px;
+    height: 40px;
+  }
+
+  /* footer */
+
+  .form__footer {
+    background-color: #e8f1de;
+    text-align: center;
+    border-radius: 5px 5px 30px 30px;
+    height: 50px;
+  }
+
+  .form__footer__submit-button{
+    width: 100%;
+    border-color: transparent;
+    background-color: transparent ;
+    color:#2F3E46;
+    height: 100%;
+    font-size: larger;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* base */
+
+  ::placeholder {
+    color: #e8f1de;
+  }
+</style>
