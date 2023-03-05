@@ -13,7 +13,7 @@
     Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     mc:Ignorable="d">
     <Grid Margin="20">
-        <ListBox>
+        <ListBox Name="DomainsListBox">
         </ListBox>
     </Grid>
 </Page>
