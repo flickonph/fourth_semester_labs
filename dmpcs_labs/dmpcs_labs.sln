@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dmPCs", "dmPCs\dmPCs.csproj", "{B681B36D-907E-44B9-A8C8-3249BDF7E3DC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dmpcs", "dmpcs\dmpcs.csproj", "{B681B36D-907E-44B9-A8C8-3249BDF7E3DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -17,6 +17,8 @@ internal static class Program
 				Console.WriteLine("Doesn't exist");
 				break;
 		}
+
+		Console.ReadKey();
 		return 0;
 	}
 }

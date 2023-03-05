@@ -5,10 +5,10 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AssemblyName>dmpcs</AssemblyName>
+        <RootNamespace>dmpcs</RootNamespace>
+        <LangVersion>10</LangVersion>
+        <ApplicationIcon>Assets\csharp-plain.ico</ApplicationIcon>
     </PropertyGroup>
-
-    <ItemGroup>
-      <Folder Include="Assets" />
-    </ItemGroup>
 
 </Project>
