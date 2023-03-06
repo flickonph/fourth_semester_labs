@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace program_tech_labs.Models;
 
-public class Lab3Model
+public static class Lab3Model
 {
     private static double Func1(double x)
     {
-        double localRes = Double.NaN;
+        var localRes = double.NaN;
         try
         {
             localRes = Math.Atan(x);
@@ -21,7 +21,7 @@ public class Lab3Model
 
     private static double Func2(double x)
     {
-        double localRes = double.NaN;
+        var localRes = double.NaN;
         try
         {
             localRes = Math.Exp(-0.1 * x);
@@ -35,13 +35,13 @@ public class Lab3Model
 
     private static double Func3(double x)
     {
-        double localRes = double.NaN;
+        var localRes = double.NaN;
         try
         {
             localRes = Math.Log(Math.Atan(Math.Pow(-x, 2)), Math.Abs(x));
             return localRes;
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return localRes;
         }
@@ -58,7 +58,7 @@ public class Lab3Model
             }
             catch (Exception)
             {
-                return Double.NaN;
+                return double.NaN;
             }
         }
 

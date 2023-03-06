@@ -5,18 +5,20 @@ internal static class Lab2
 	private static double T;
 	private const double R = 8.314;
 	private static readonly double[] Ai = {
-		2.45041896E+00, 2.99807749E-02, 2.82471382E-05, -6.00704031E-08, 2.66264111E-11, -1.71521009E+04, 1.84229851E+01
+		2.45041896E+00, 2.99807749E-02, 2.82471382E-05,
+		-6.00704031E-08, 2.66264111E-11, -1.71521009E+04, 1.84229851E+01
 	};
 	internal static void Lab2Main()
 	{
-		T = 250;
+		T = 250.0;
 		Console.WriteLine("variant: 59\n" +
 		                  "C3H7NO2 (Nitropro)\n" +
 		                  $"first task res: {FirstTask()}\n");
-		T = 298;
+		T = 298.0;
 		Console.WriteLine("variant: 17\n" +
 		                  "02(1)|Ar(3)\n" +
 		                  $"second task res: {SecondTask()}");
+		
 	}
 
 	private static double FirstTask()
@@ -28,7 +30,7 @@ internal static class Lab2
 		        (Ai[2] / 2) * Math.Pow(T, 2) +
 		        (Ai[3] / 3) * Math.Pow(T, 3) +
 		        (Ai[4] / 4) * Math.Pow(T, 4) +
-		        (Ai[6] / T))*R;
+		        (Ai[6]))*R;
 	}
 
 	private static double SecondTask()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Xml;
 
 namespace program_tech_labs.Models;
@@ -9,6 +10,8 @@ public static class Lab4Model
 {
     public static List<UrlInfo> GetDomainsInfo()
     {
+        // TODO: Use regex for bonus points
+        // TODO: Check bonus points requirements
         var xmlReader = new XmlReader("Assets/Resources.xml");
         List<string> paths = xmlReader.GetPaths();
         List<UrlInfo> urls = new List<UrlInfo>();
